@@ -1,0 +1,107 @@
+/* Pagina */
+
+
+.page {
+  background-color: #EDEFF5;
+}
+
+/* Formulario  Principal*/
+.abs-center {
+  align-items: center;
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  min-height: 100vh;
+
+
+
+}
+
+/* Formulario Login */
+.form {
+  width: 350px;
+  height: 270px;
+
+
+
+}
+
+/* Boton iniciar sesion */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: #000033;
+  border-color: #000033;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  border-radius: 5px;
+}
+
+
+
+/*Inputs */
+.form-control {
+  height: 40px;
+  border-radius: 5px;
+}
+
+/* Texto del Login  LOGIN*/
+.text-login {
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #000033;
+
+}
+
+
+/* Body del Login */
+.auth-body {
+  size: 10px;
+  width: auto;
+
+
+
+}
+
+/* Fondo del login */
+.row {
+  background-color: white;
+  border-style: groove;
+  border-color: #EDEFF5;
+  border-radius: 10px;
+  border-width: 0px;
+
+
+}
+
+
+/* Imagen del login */
+.img-login {
+  width: max-content;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.icon-password-no{
+  position: absolute;
+top:13px;
+  right: 6px;
+  cursor: pointer;
+}
+
+.icon-password-si{
+  position: absolute;
+top:13px;
+  right: 6px;
+  cursor: pointer;
+}
