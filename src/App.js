@@ -1,4 +1,4 @@
-import AppRouter from './assets/utilidades/routers/AppRouter'
+import AppRouter from './assets/utilities/routers/AppRouter';
 import React from 'react';
 
 const Auth = () => {
