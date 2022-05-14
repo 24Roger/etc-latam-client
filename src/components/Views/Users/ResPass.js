@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Fragment } from 'react'
-import { } from '../../../assets/css/users/pass.css'
+import { } from '../../../assets/css/users/ResPass.css'
 import Alert from "@mui/material/Alert"
 import Form from "../../../assets/utilities/Forms_Validations";
 import $ from "jquery";
@@ -8,6 +8,7 @@ import { Default } from 'react-awesome-spinners';
 import axios from "axios";
 import { setUserSession } from "../../../assets/utilities/setUserSession";
 import { baseUrlNewPassword } from '../../../assets/utilities/apis/urlLogin';
+import { useLocation } from "react-router";
 
 
 
@@ -21,9 +22,15 @@ export const ResPass = (props) => {
     const [confirmpassword, setConfirmPassword] = useState("");
     const [error, seTError] = useState(null);
     const [loading, setLoading] = useState(false);
-     
-    
-    
+
+
+    //Extracion del token de la url y creamos una variable para poder usarla en el axios
+    const { pathname } = useLocation();
+    console.log(pathname);
+    const token = pathname.split('/')[2]
+
+
+
 
     const validateResPass = () => {
         let isValid = true;
@@ -73,73 +80,43 @@ export const ResPass = (props) => {
 
         seTError(null);
         setLoading(true);
-        const accesToken = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTEsImlhdCI6MTY0OTc3ODMyOCwiZXhwIjoxNjQ5NzkwMzI4fQ.GMJQi_Q0V0YrrSr6Dck493yyrEtk0G-KOdK7WyRzVGo`
-  
-        // const accesToken = localStorage.getItem({token: 'token'});
-
-        //   axios.interceptors.request.use(
-        //         config => {
-        //             config.headers.reset = `${accesToken}`;
-        //             return config;
-        //         },
-        //         error => {
-        //             return Promise.reject(error);
-
-        //         }
-        //     );
-
         const authAxios = axios.create({
-
             headers: {
-                reset: `${accesToken}`,
+                reset: `${token}`
             },
         });
 
         authAxios.put(baseUrlNewPassword, {
-            password: password
-
-
+            password: password,
         }).then(response => {
-
             setLoading(false);
-            setUserSession(response.data.token, response.data.user);
+            setUserSession(response.data);
             window.alert(response.data)
-            console.log(response);
-
             props.history.push("/login");
-
         }).catch(error => {
-
             if (error.response.status === 400) {
-
                 setLoading(false);
-
                 seTError(error.response.data.error.detail[0].msg);
                 console.log(error.response);
                 setLoading(false);
-
-                // setLoading(false);
+                return;
             } else if (error.response.status === 401) {
                 setLoading(false);
-
                 seTError(error.response.data.error.message);
                 console.log(error.response);
                 setLoading(false);
-
-
+                return;
             } else if (error.response.status === 500) {
                 // setLoading(false);
                 alert("Error interno del servidor")
                 seTError(error.response.data.message);
                 console.log(error.response);
                 setLoading(false);
-
-
+                return;
             } else {
                 seTError("Error de Servidor")
+                return;
             }
-
-
         });
     }
 
@@ -199,6 +176,7 @@ export const ResPass = (props) => {
                                                             placeholder="Nueva contraseña"
                                                             onKeyUp={authenticate}
                                                             onBlur={authenticate}
+                                                            onPaste={authenticate}  
                                                             onChange={(e) => setPassword(e.target.value)}
 
                                                         >

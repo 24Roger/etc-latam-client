@@ -18,7 +18,8 @@ export const Home = () => {
             <div className="Home wrapper">
                 <SideBar toggle={toggleSidebar} isOpen={sidebarIsOpen} />
                 <Content toggleSidebar={toggleSidebar} sidebarIsOpen={sidebarIsOpen} />
-               
+
+
             </div>
         </Router>
     )

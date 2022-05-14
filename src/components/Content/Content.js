@@ -2,11 +2,10 @@ import React from "react";
 import classNames from "classnames";
 import { Container } from "reactstrap";
 import { Switch, Route } from "react-router-dom";
-
 import Topbar from "./Topbar";
 import { Users } from "../Views/Users/Users";
-import { Dashboard } from "../Views/Home/Dashboard";
-import {Login} from "../Views/Users/Login";
+import { Dashboard } from "../Views/Home/Dashboard"
+import {internalserver} from '../../assets/utilities/errores/500_page'
 
 const Content = ({ sidebarIsOpen, toggleSidebar }) => (
   <Container
@@ -29,8 +28,9 @@ const Content = ({ sidebarIsOpen, toggleSidebar }) => (
       <Route exact path='/home' component={Dashboard} />
       <Route exact path="/home/dashboard" component={Dashboard} />
       {/* <Route exact path="/" component={Login} /> */}
-      <Route exact path="/login" component={Login} />
+      {/* <Route exact path="/login" component={Login} /> */}
       <Route exact path='/home/users' component={Users} />
+      <Route exact path='/home/users/500page' component={internalserver} />
       <Route exact path="/page-1" component={() => "page-1"} />
       <Route exact path="/page-2" component={() => "page-2"} />
       <Route exact path="/page-3" component={() => "page-3"} />
