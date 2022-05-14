@@ -1,0 +1,363 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+.Home {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+  
+  
+}
+
+
+
+
+/* ---------------------------------------------------
+      SIDEBAR STYLE
+  ----------------------------------------------------- */
+.sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #000;
+  color: #fff;
+  margin-left: -250px;
+  transition: all 0.5s;
+  margin-top: -10px;
+
+  
+
+
+}
+
+
+
+/* Logo etc */
+.sidebar-header img {
+  width: 210px;
+  height: 83px;
+  margin-left: -15px;
+  position: inherit;
+  margin-bottom: -9px;
+
+
+}
+
+
+.sidebar.is-open {
+  margin-left: 0;
+  transition: 0.5s;
+
+
+}
+
+/* color Header-Logo ETC LATAM */
+.sidebar-header {
+  background: #0d274a;
+  border-right: 2px solid #00000020;
+}
+
+/* nombre empresa ETC LATAM */
+/* .sidebar-header h3 {
+  color: #fff;
+  padding: 0.7rem;
+
+} */
+
+/* icono barra para ocultar menu */
+.btnfabars:hover {
+  color: #fff;
+  background-color: #0d274a;
+  border-color: #ffffff;
+
+}
+
+
+/* Nombre de modulo */
+.menu-open {
+  /* color: orange; */
+  background: #1c1f2b;
+}
+
+
+
+/* color para nombre de modulo al estar seleccionado */
+.nav-item:focus,.nav-item:hover {
+  color: #fff;
+  background-color: #0d274a important;
+
+}
+
+
+
+.nav-link:focus, .nav-link:hover, .nav-link:active {
+  color: #fff;
+  background: #0d274a;
+}
+
+.pl-4:hover{
+  background-color: #0d274a;
+}
+
+
+/* color fonndo submenu- submodulo*/
+.items-menu {
+  background: #1c1f2b;
+  
+}
+
+
+
+/* flechas de submenu de seleecion  */
+.dropdown-toggle::after { 
+    display: inline-flex;
+    position: inherit;
+    left: 12rem;
+    margin-top: 10px;
+ 
+   
+  }
+
+.sidebar-header>span {
+  position: relative;
+  float: right;
+  margin: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  color: #fff;
+  background: #181b27;
+}
+
+/* menu de sidebar */
+
+.side-menu {
+  height: calc(100vh - 130px);
+  overflow-y: scroll;
+  margin-top: 1rem;
+ 
+
+
+}
+
+/* scrollbac  menu sidebar*/
+.side-menu::-webkit-scrollbar {
+  width: 10px;
+  
+
+
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+  background: #0d274a;
+
+}
+
+.side-menu::-webkit-scrollbar-thumb:hover {
+  background: #424658;
+  margin-right: 2rem;
+  
+ 
+}
+
+
+
+/* ---------------------------------------------------
+      CONTENT STYLE
+  ----------------------------------------------------- */
+.content {
+  padding: 0px;
+  margin-left: 0;
+  height: 100vh;
+  border-left: 10px;
+ 
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    overflow: hidden;
+
+  }
+
+  .content.is-open {
+    margin-left: 100%;
+
+  }
+
+  .sidebar.is-open {
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    transition: all 0.5s, height 0s;
+  }
+
+  .sidebar.is-open>.sidebar-header span {
+    display: unset;
+  }
+
+  li a.dropdown-toggle::after {
+    display: inline-block;
+    position: relative;
+    left: 68%;
+   
+  }
+
+}
+
+
+
+/* tabulacion del texto menu y submenu */
+.mr-2 {
+  margin-right: 2rem;
+  color: #ffffff;
+ 
+}
+/* Home,... */
+.mr-3{
+  color: #ffffff;
+}
+
+
+/* submenu sidebar */
+
+.dropdown-toggle {
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #ffffff20;
+  border-radius: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  margin-top: 0px;
+  height: 3rem;
+
+
+}
+
+
+/* Navbar */
+.navbar {
+  width: 100% !important;
+}
+
+
+.items-menu {
+  color: #ffffff;
+
+
+}
+
+/* Color para navbar */
+.mb-4 {
+  background-color: #0d274a;
+  color: orange !important;
+
+}
+
+.ml-auto {
+  margin-left: auto;
+  color: #ffffff;
+
+}
+
+/* .mb-4 {
+  color: orange !important;
+
+}
+
+.collapse {
+  color: orange !important;
+
+
+} */
+
+/* texto de submenu-alineado */
+.pl-4 {
+  margin-left: 0rem;
+
+}
+
+/* texo  y color de submenu sidebar */
+.navlink-submenu {
+  color: #ffffff;
+text-indent: 50px;
+
+
+}
+
+
+
+
+
+/* I cerrar sesion */
+
+.cerrarsesion {
+  margin-top: 0.55rem;
+
+}
+
+.icon {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.logout {
+  font-size: 15px;
+  color: #ffffff;
+
+
+}
+
+.logout:hover {
+  color: #ffffff;
+  cursor: pointer;
+
+
+}
+
+/* usuario logeado */
+
+.bienvenido {
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.usuario {
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.welcome-user {
+  margin-top: 15px
+}
+
+/* spiner loading usuarios */
+.spiner-loading-usuarios {
+  margin-top: 100px;
+  margin-left: 40%;
+  position: absolute;
+
+}
+
+/* mensaje error al obtner usuarios y no responde el servidor */
+
+.mensaje-error-users {
+  margin-top: -1.5rem;
+
+}
