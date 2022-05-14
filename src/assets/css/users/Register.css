@@ -1,9 +1,159 @@
-.register{
-    
-  margin-bottom: 10px;
+.register-page {
+  background-color: #EDEFF5;
 }
 
-.eye{
-    margin-bottom: 10px;
-    
+/* .abs-center{
+  background-color: black;
+} */
+.register-row {
+  background-color: white;
+  border-style: groove;
+  border-color:white;
+  border-radius: 10px;
+  border-width: 0px;
+  width: 590px;
+
+  /* margin-top: -100px; */
+  /* text-align: center; */
+
+
+}
+
+
+/* .auth-form{
+  background-color:black;
+  height: 40px;
+} */
+.register-form {
+   margin: 25px;
+  
+}
+
+
+.input-register {
+  height: 45px;
+  width: 520px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(179, 175, 175);
+  margin-top: 12px;
+ 
+}
+.input-register-name{
+  height: 45px;
+  width: 520px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(179, 175, 175);
+  margin-top: 12px;
+  text-transform: capitalize;
+
+
+}
+.input-register-last-name{
+  height: 45px;
+  width: 520px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(179, 175, 175);
+  margin-top: 12px;
+  text-transform: capitalize;
+
+
+}
+
+.input-register:focus {
+  outline: none !important;
+  border: 1px solid #000033;
+  
+}
+
+.mensaje-campos-requeridos-register {
+  width: 520px;
+  text-align: justify;
+ 
+}
+
+.icon-password-register {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  cursor: pointer;
+
+}
+
+.icon-confirmpassword-register {
+  position: relative;
+ top: -35px;
+  right: -242px;
+    cursor: pointer;
+
+}
+
+.register-btn {
+  margin-top: 10px;
+}
+
+.register-cancelar {
+  text-align: end;
+  margin: -10px;
+  margin-top: 10px;
+}
+
+.crear-cuenta {
+  color: #000033;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: -10px;
+  margin-top: 20px;
+
+
+}
+
+.register-text-link {
+  color: #000033;
+  font-weight: bold;
+}
+
+.btn-enviar-register {
+  background-color: #000033;
+  border-color: #000033;
+  color: white;
+  border-radius: 5px;
+  width: 520px;
+  height: 40px;
+  outline: none;
+  margin-top: 5px;
+}
+
+.register-line {
+  width: 518px;
+  background-color: #000033;
+}
+
+.btn-enviar-register:disabled {
+  background-color: #4e4e6e;
+  border-color: #4e4e6e;
+  color: white;
+  border-radius: 5px;
+
+}
+
+.spinner-loading-register{
+position: absolute;
+ margin-top: -550px;
+ margin-right: center !important;
+ 
+}
+
+.mensaje-error-register {
+  width: 520px;
+  margin: 25px;
+  margin-bottom: -30px;
+  font-family: 'Times New Roman', Times, serif;
+  height: fit-content;
+  text-align: justify !important;
+ color: #000033;
+
 }

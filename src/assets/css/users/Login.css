@@ -14,20 +14,16 @@
   min-height: 100vh;
 
 
-
 }
 
 /* Formulario Login */
-.form {
+.login-form {
   width: 350px;
-  height: 270px;
-
-
 
 }
 
 /* Boton iniciar sesion */
-.btn-primary,
+/* .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited,
@@ -40,15 +36,52 @@
   -o-transition: all 1s ease;
   -ms-transition: all 1s ease;
   border-radius: 5px;
+} */
+
+.btn-iniciar-sesion {
+  background-color: #000033;
+  border-color: #000033;
+  color: white;
+  border-radius: 5px;
+  width: 350px;
+  height: 35px;
+
+
 }
 
+.btn-iniciar-sesion:disabled {
+  background-color: #4e4e6e;
+  border-color: #4e4e6e;
+  color: white;
+  border-radius: 5px;
 
+}
 
 /*Inputs */
-.form-control {
+/* .form-control {
   height: 40px;
   border-radius: 5px;
+  border-style: groove;
+
+
+} */
+
+.input-login {
+  height: 40px;
+  width: 350px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(179, 175, 175);
+
 }
+
+
+
+
+
+
+
+
 
 /* Texto del Login  LOGIN*/
 .text-login {
@@ -70,7 +103,8 @@
 
 }
 
-/* Fondo del login */
+/* Fondo o cuadro del login */
+
 .row {
   background-color: white;
   border-style: groove;
@@ -78,30 +112,102 @@
   border-radius: 10px;
   border-width: 0px;
 
-
 }
 
 
 /* Imagen del login */
 .img-login {
-  width: max-content;
+  width: 240px;
   height: 150px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2px;
+  margin-top: 10px;
+  
+  
+
+
+
+  
+
+
 
 }
 
-.icon-password-no{
-  position: absolute;
-top:13px;
-  right: 6px;
-  cursor: pointer;
+.input-login:focus {
+  /* outline: none !important; */
+  border: 1px solid #000033;
+
+
 }
 
-.icon-password-si{
+
+.icon-password-login {
   position: absolute;
-top:13px;
-  right: 6px;
+  top: 15px;
+  right: 5px;
   cursor: pointer;
+
+
+}
+
+
+.forgot-pass {
+  color: #000033;
+  font-weight: bold;
+  margin-right: -70px;
+   margin-left: -80px;
+  
+
+
+
+
+}
+
+.login-text-link {
+  color: #000033;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.form-check-label {
+  margin-left: 0px;
+}
+
+.auth-option {
+  margin-top: -10px;
+  height: 40px;
+
+
+}
+
+/* .Campo-requerido-login {
+  width: 100%;
+
+} */
+
+.mensaje-campos-requeridos-login {
+  width: 350px;
+  text-align: justify;
+
+
+}
+
+
+.mensaje-error {
+  width: 350px;
+  margin-bottom: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  height: fit-content;
+  text-align: justify !important;
+  color: #000033;
+
+}
+
+.spinner-loading {
+  position: absolute;
+  margin-top: -500px;
+  margin-right: center !important;
+
 }

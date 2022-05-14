@@ -1,18 +1,107 @@
-.restablecer-pass{
- font-weight: bold;
- color: #000033;
- font-size: 17px;
+.page {
+    background-color: #EDEFF5;
 }
 
-.text-correo{
-text-align: left;
-width:  auto;
-height: auto;
+.restablecer-pass {
+    font-weight: bold;
+    color: #000033;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 10px;
 
 }
-.restablecer-pass{
-    text-align: left;
+
+.text-correo {
+    text-align: justify;
+    width: auto;
+    height: auto;
+
 }
-.page{
-    background-color:#EDEFF5;
+
+.restablecer-pass {
+    text-align: center;
+    color: #000033;
+    text-decoration: underline;
+    font-size: 15px;
+     margin-bottom: 30px;
+     margin-top: 20px;
+
+}
+
+.forgot-row {
+    background-color: white;
+    border-style: groove;
+    border-color: #EDEFF5;
+    border-radius: 10px;
+    border-width: 0px;
+
+
+
+}
+
+.forgot-form {
+    text-align: center;
+    margin: 10px;
+    width: 350px;
+    margin-bottom: 10px;
+
+
+}
+
+
+
+.forgot-text-link {
+    color: #000033;
+    font-weight: bold;
+     
+
+}
+
+/* Input */
+
+.input-restablecer {
+    height: 40px;
+    width: 350px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(179, 175, 175);
+}
+
+.input-restablecer:focus {
+    /* outline: none !important; */
+    border: 1px solid #000033;
+}
+
+.btn-enviar-restablecer {
+    background-color: #000033;
+    border-color: #000033;
+    color: white;
+    border-radius: 5px;
+    width: 350px;
+    height: 35px;
+}
+
+.spinner-loading-forgot {
+    position: absolute;
+    margin-top: -450px;
+    margin-right: center !important;
+
+}
+
+.mensaje-error-forgot {
+    width: 350px;
+    margin: 10px;
+    margin-bottom: -10px;
+    font-family: 'Times New Roman', Times, serif;
+    height: fit-content;
+    text-align: justify !important;
+    color: #000033;
+
+}
+.btn-enviar-restablecer:disabled {
+  background-color: #4e4e6e;
+  border-color: #4e4e6e;
+  color: white;
+  border-radius: 5px;
+
 }
